@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethan Mwangi — Full-Stack Engineer</title>
+<meta name="description" content="Ethan Mwangi — Software Engineering student at USIU Nairobi. Full-stack work across professional and freelance tracks: React, TypeScript, FastAPI, and deployed client sites.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="pitch-line" aria-hidden="true"></div>
+
+<header class="top-bar">
+  <a href="#" class="mark">EM<span>.</span></a>
+  <nav class="top-nav">
+    <a href="#work">Work</a>
+    <a href="#stack">Stack</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-text">
+      <p class="eyebrow">Nairobi, Kenya &mdash; Software Engineering, USIU</p>
+      <h1>Ethan Mwangi</h1>
+      <p class="hero-sub">
+        Full-stack engineer building on two pitches at once &mdash;
+        shipping production-minded projects on one side, and deployed
+        client work on the other. Same discipline, different scoreboard.
+      </p>
+      <p class="status-line">
+        <span class="dot" aria-hidden="true"></span>
+        open to internships &nbsp;/&nbsp; available for freelance work
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn btn-primary">See the work</a>
+        <a href="#contact" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/ethan-photo.jpg" alt="Portrait of Ethan Mwangi" width="280" height="360">
+      <span class="photo-tag">RB &middot; ENGINEER</span>
+    </div>
+  </section>
+
+  <!-- TRACK SWITCHER -->
+  <section class="lineup" id="work">
+    <div class="lineup-head">
+      <p class="section-label">// 01 &mdash; The lineup</p>
+      <h2>Two tracks. One player.</h2>
+      <p class="section-intro">
+        Toggle between how I work professionally and how I work as a
+        freelancer &mdash; the stack shifts slightly, the standard doesn't.
+      </p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Work track">
+      <button class="tab is-active" role="tab" aria-selected="true" data-track="professional" id="tab-professional">
+        <span class="tab-num">01</span> Professional
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-track="freelance" id="tab-freelance">
+        <span class="tab-num">02</span> Freelance
+      </button>
+      <span class="tab-indicator" aria-hidden="true"></span>
+    </div>
+
+    <div class="track-panel" id="panel-professional" role="tabpanel" aria-labelledby="tab-professional">
+      <p class="track-blurb">
+        Rebuilding my fundamentals properly after a bootcamp that leaned
+        too hard on AI-generated code &mdash; now focused on writing
+        code I can defend, explain, and extend on my own. This track is
+        academic and hackathon work built toward an internship and a
+        long-term full-stack role.
+      </p>
+
+      <div class="stack-row" data-track-stack="professional">
+        <span class="tag">React</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">FastAPI</span>
+        <span class="tag">XGBoost</span>
+        <span class="tag">Python</span>
+        <span class="tag">Git / GitHub</span>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag tag-hackathon">Hackathon</span>
+          </div>
+          <h3>ScholarMatch AI</h3>
+          <p>
+            An AI-powered scholarship recommendation system &mdash;
+            matches students to funding using an explainable model,
+            built specifically against the judging criteria for AI
+            ethics and transparency.
+          </p>
+          <div class="project-meta">
+            <span>React &middot; FastAPI &middot; XGBoost</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag tag-group">Group project</span>
+          </div>
+          <h3>Goal-Gear Storefront</h3>
+          <p>
+            Extended an existing e-commerce repo into a complete shopping
+            flow &mdash; auth, cart, shipping, checkout, reviews, and a
+            star-rating modal &mdash; kept in plain HTML/CSS/JS to match
+            the codebase and stay explainable at presentation.
+          </p>
+          <div class="project-meta">
+            <span>HTML &middot; CSS &middot; JavaScript &middot; localStorage</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--muted">
+          <div class="project-top">
+            <span class="project-tag tag-progress">In progress</span>
+          </div>
+          <h3>Next up</h3>
+          <p>
+            Currently building toward my first proper internship
+            application &mdash; this space fills in as new work lands.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="track-panel is-hidden" id="panel-freelance" role="tabpanel" aria-labelledby="tab-freelance">
+      <p class="track-blurb">
+        Independent client work, mostly restaurants and small local
+        businesses in Nairobi, alongside remote-platform positioning for
+        Fiverr, Upwork, and Contra. Every project here shipped and is
+        live &mdash; deployed, not just designed.
+      </p>
+
+      <div class="stack-row" data-track-stack="freelance">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Vercel</span>
+        <span class="tag">HTML / CSS</span>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag tag-live">Live</span>
+          </div>
+          <h3>Dau Swahili Restaurant</h3>
+          <p>
+            A restaurant site built and deployed for a local Nairobi
+            client &mdash; Vite, React, and TypeScript, shipped to
+            production on Vercel.
+          </p>
+          <div class="project-meta">
+            <a href="https://dau-restaurant.vercel.app" target="_blank" rel="noopener noreferrer">
+              dau-restaurant.vercel.app &nearr;
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag tag-concept">Concept</span>
+          </div>
+          <h3>Tokyo Restaurant Mockup</h3>
+          <p>
+            A portfolio-piece concept build exploring a different visual
+            language and layout system from the client work above.
+          </p>
+          <div class="project-meta">
+            <span>React &middot; TypeScript</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-top">
+            <span class="project-tag tag-personal">Personal</span>
+          </div>
+          <h3>Chantelle's Birthday Museum</h3>
+          <p>
+            An interactive one-off site built as a personal gift &mdash;
+            same production standard as client work, just for someone
+            instead of a business.
+          </p>
+          <div class="project-meta">
+            <span>HTML &middot; CSS &middot; JavaScript</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK SUMMARY -->
+  <section class="stack-section" id="stack">
+    <p class="section-label">// 02 &mdash; What I build with</p>
+    <div class="stack-grid">
+      <div class="stack-col">
+        <h4>Frontend</h4>
+        <ul>
+          <li>React + TypeScript</li>
+          <li>Vite</li>
+          <li>Vanilla HTML / CSS / JS</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Backend &amp; data</h4>
+        <ul>
+          <li>FastAPI</li>
+          <li>Python</li>
+          <li>XGBoost</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <h4>Tooling</h4>
+        <ul>
+          <li>Git &amp; GitHub</li>
+          <li>Vercel</li>
+          <li>VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer class="contact" id="contact">
+    <p class="section-label">// 03 &mdash; Get in touch</p>
+    <h2>Building something? Let's talk.</h2>
+    <div class="contact-links">
+      <a href="mailto:ethan.mwangi20067@gmail.com">ethan.mwangi20067@gmail.com</a>
+      <a href="https://github.com/ethanmwangi/EthanMwangiPortfolio" target="_blank" rel="noopener noreferrer">GitHub &nearr;</a>
+      <a href="https://www.linkedin.com/in/ethan-mwangi-b24315353/" target="_blank" rel="noopener noreferrer">LinkedIn &nearr;</a>
+    </div>
+    <p class="footer-note">Nairobi, Kenya &middot; Right-back, right-wing-back for Generation Sharpfoot &middot; USIU Software Engineering</p>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
