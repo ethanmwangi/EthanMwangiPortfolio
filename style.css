@@ -134,6 +134,28 @@ section, header, footer {
   padding-bottom: 96px;
 }
 
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text > * {
+    animation: hero-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .hero-text > .eyebrow { animation-delay: 0.02s; }
+  .hero-text > h1 { animation-delay: 0.08s; }
+  .hero-text > .hero-sub { animation-delay: 0.16s; }
+  .hero-text > .status-line { animation-delay: 0.24s; }
+  .hero-text > .hero-cta { animation-delay: 0.32s; }
+
+  .hero-photo {
+    animation: hero-rise 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-delay: 0.2s;
+  }
+}
+
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -332,7 +354,34 @@ section, header, footer {
   border-radius: 999px;
 }
 
+.track-panel {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
 .track-panel.is-hidden { display: none; }
+
+.track-panel.is-fading-out {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+/* thin scroll-progress readout, like a match clock ticking across the top */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--line);
+  z-index: 50;
+}
+
+.scroll-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gold);
+  transform-origin: left;
+}
 
 .project-grid {
   display: grid;
@@ -340,17 +389,47 @@ section, header, footer {
   gap: 18px;
 }
 
+.project-grid--pair {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .project-card {
+  position: relative;
+  overflow: hidden;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, opacity 0.35s ease;
 }
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(201, 162, 39, 0.1),
+    transparent 65%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card:hover::before { opacity: 1; }
+
+.project-card > * { position: relative; z-index: 1; }
 
 .project-card:hover {
   border-color: var(--line-strong);
   transform: translateY(-3px);
+}
+
+/* staggered entrance state, toggled from JS on panel switch */
+.project-card.card-pending {
+  opacity: 0;
+  transform: translateY(10px);
 }
 
 .project-card--muted {
