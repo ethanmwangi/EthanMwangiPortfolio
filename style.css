@@ -1,6 +1,4 @@
-/* ==========================================================
-   Design tokens
-   ========================================================== */
+
 :root {
   --bg: #0b1210;
   --surface: #121c18;
@@ -67,8 +65,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   outline-offset: 3px;
 }
 
-/* signature: a thin pitch halfway-line that runs the full height
-   of the page, faint, behind everything */
+
 .pitch-line {
   position: fixed;
   top: 0;
@@ -88,10 +85,6 @@ section, header, footer {
   padding-left: 24px;
   padding-right: 24px;
 }
-
-/* ==========================================================
-   Top bar
-   ========================================================== */
 .top-bar {
   display: flex;
   align-items: center;
@@ -122,9 +115,7 @@ section, header, footer {
 .top-nav a { transition: color 0.15s ease; }
 .top-nav a:hover { color: var(--text); }
 
-/* ==========================================================
-   Hero
-   ========================================================== */
+
 .hero {
   display: grid;
   grid-template-columns: 1.4fr 0.6fr;
@@ -253,9 +244,7 @@ section, header, footer {
   color: var(--gold);
 }
 
-/* ==========================================================
-   Section labels (shared)
-   ========================================================== */
+
 .section-label {
   font-family: var(--font-mono);
   font-size: 13px;
@@ -263,9 +252,7 @@ section, header, footer {
   margin-bottom: 14px;
 }
 
-/* ==========================================================
-   Lineup / track switcher
-   ========================================================== */
+
 .lineup {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -365,7 +352,6 @@ section, header, footer {
   transform: translateY(6px);
 }
 
-/* thin scroll-progress readout, like a match clock ticking across the top */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -479,9 +465,7 @@ section, header, footer {
 
 .project-meta a:hover { border-color: var(--gold); }
 
-/* ==========================================================
-   Stack summary
-   ========================================================== */
+
 .stack-section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -510,7 +494,7 @@ section, header, footer {
 
 .stack-col li:last-child { border-bottom: none; }
 
-/* ==========================================================
+
    Contact / footer
    ========================================================== */
 .contact {
@@ -562,9 +546,6 @@ section, header, footer {
   transform: translateY(0);
 }
 
-/* ==========================================================
-   Responsive
-   ========================================================== */
 @media (max-width: 860px) {
   .hero {
     grid-template-columns: 1fr;
